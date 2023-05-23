@@ -1,0 +1,628 @@
+/* ----- Google fonts ----- */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Irish+Grover&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;600&family=Irish+Grover&family=Raleway:wght@700&display=swap');
+
+/* ----- Resetting all default styles ----- */
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style-type: none;
+    scroll-behavior: smooth;
+}
+
+#projects{
+    text-align: center;
+    background-color: #252934;
+    padding: 3rem 0;
+}
+
+#projects > h2{
+    color: #fff;
+    font-size: 2em;
+}
+
+#projects > h2 span{
+    color: #e31b6d;
+}
+
+.project__container{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-content: center;
+    gap: 1.5rem;
+    padding-top: 2rem;
+}
+
+.project__card{
+    width: 400px;
+    height: 350px;
+    background-color: #fff;
+    font-size: .9rem;
+    text-align: left;
+}
+
+.project__card img{
+    width: 100%;
+    height: 60%;
+    object-fit: cover;
+}
+
+.project__content{
+    padding: 0 1rem;
+    position: relative;
+}
+
+.project__card h2{
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    line-height: 2em;
+}
+
+.project__card h3{
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+}
+
+.project__card P{
+    font-size: 13px;
+}
+
+.project__card span{
+    position: absolute;
+    top: 6%;
+    right: 5%;
+    background-color: #252934;
+    color: white;
+    padding: .3rem .5rem;
+    border-radius: 15px;
+    font-size: 12px;
+}
+
+.project__card span a{
+    color: white;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+}
+
+/* ----- Header Styles ----- */
+
+header{
+    background-color: #252934;
+    height: 900px;
+    max-height: 100vh;
+}
+
+/* ----- Navigation starts here ----- */
+
+nav{
+    padding: 1.1rem 8rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo{
+    font-family: 'Irish Grover', cursive;
+    font-weight: 700;
+    font-size: 1.4rem;
+    cursor: pointer;
+    color: #fff;
+}
+
+.logo span{
+    color: #e31b6d;
+}
+
+ul{
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+ul li a{
+    color: #fff;
+    padding-bottom: 8px;
+    font-size: 1rem;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    transition: all .4s ease-in-out;
+}
+
+ul li a:hover{
+    border-bottom: 1px solid #e31b6d;
+}
+
+.active{
+    color: #e31b6d;
+}
+
+.open,
+.close{
+    display: none;
+}
+
+/* ----- Navigation ends here ----- */
+
+.dev{
+    position: absolute;
+    top: 50%;
+    left: 12%;
+    transform: translateY(-50%) ;
+    font-size: 1.2rem;
+}
+.dev h1:not(:nth-child(1)){
+    margin: 10px 0;
+    position: relative;
+    color: transparent;
+    width: fit-content;
+    animation: text-anim .5s ease forwards;
+    animation-delay: 1s;
+}
+
+.dev h1:nth-child(1),
+.dev p{
+    margin: 10px 0;
+    position: relative;
+    color: transparent;
+    width: fit-content;
+    animation: text-anim2 .5s ease forwards;
+    animation-delay: 1s;
+}
+
+.dev h1:nth-child(1){
+    animation-delay: 1s;
+}
+
+.dev h1:nth-child(2){
+    animation-delay: 2s;
+}
+
+.dev h1:nth-child(3){
+    animation-delay: 3s;
+}
+
+.dev p{
+  animation-delay: 4s;
+}
+
+.dev h1 span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    background-color: #e31b6d;
+    animation: text-anim-box 1s ease;
+    animation-delay: .5s;
+}
+
+.dev h1:nth-child(1) span{
+    animation-delay: .5s;
+}
+
+.dev h1:nth-child(2) span{
+    animation-delay: 1.5s;
+}
+
+.dev h1:nth-child(3) span{
+    animation-delay: 2.5s;
+}
+
+header button{
+    padding: 10px;
+    width: 10rem;
+    font-size: 1.2rem;
+    border: none;
+    margin: 10px 10px 0 0;
+}
+
+.btn1 a{
+    color: #fff;
+}
+
+.btn2 a{
+    color: #e31b6d;
+}
+
+.btn1{
+    background-color: #e31b6d;
+    border: 2px solid #e31b6d;
+}
+
+.btn1:hover{
+    background-color: transparent;
+    transition: all .3s;
+}
+
+.btn2:hover{
+    background-color: #e31b6d;
+    transition: all .3s;
+}
+
+.btn1:hover a{
+    color: #e31b6d;
+}
+
+.btn2:hover a{
+    color: white;
+}
+
+.btn2{
+    background-color: transparent;
+    color: #e31b6d;
+    border: 2px solid #e31b6d;  
+}
+
+/* --- Hero header animation --- */
+
+/* --- Makes the span spread to 100% width then animate to 0% --- */
+@keyframes text-anim-box {
+    50%{
+        width: 100%;
+        left: 0;
+    }
+    100%{
+        width: 0;
+        left: 100%;
+    }
+}
+
+/* --- Text is set to transparent so this animation makes the text appear when the animation gets to 100% --- */
+@keyframes text-anim {
+    100%{
+      color: #e31b6d;
+    }
+}
+
+@keyframes text-anim2 {
+    100%{
+      color: #fff;
+    }
+}
+
+/* --- Animation ends here --- */
+
+/* ----- About me section ----- */
+
+.about_me{
+    background-image: url('../assets/bg-pattern-intro-right-desktop.svg');
+    background-repeat: no-repeat;
+    background-position: top right;
+    background-size: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 5em 2em;
+}
+
+.about_image{
+    width: 400px;
+    height: 450px;
+    background-image: url('../assets/Emmanuelhimself.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.about_text{
+    padding: 1em 0 0 0;
+    font-size: 1.1em;
+    line-height: 1.9em;
+    width: 500px;
+    height: 450px;
+    border: 1px solid grey;
+    border-right: none;
+    border-left: none;
+}
+
+.about_text p{
+    margin: 1em 0;
+}
+
+.key-point{
+    color: #e31b6d;
+    font-weight: 500;
+}
+
+.about_text .icons{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.about_text .icons i{
+    color: black;
+}
+
+/* ----- About me ends here ----- */
+
+/* ----- Interested in project Collaboration ----- */
+
+.project_collabo{
+    background-image: url('../assets/bg-pattern-intro-left-desktop.svg');
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: 10%;
+    display: grid;
+    grid-template-columns: 1.5fr 3fr 1fr;
+    gap: 2em;
+    padding: 8em 12em;
+}
+
+.project_collabo h2{
+    font-size: 1.5em;
+}
+
+.line{
+    margin: 0 auto;
+    padding-top: 1.5em;
+    width: 80%;
+}
+
+.btn{
+    transition: all .4s ease-in-out;
+    background-color: transparent;
+    border: 1px solid #252934;
+}
+
+.btn a{
+    color: black;
+}
+
+.btn:hover a{
+    color: #fff;
+}
+
+.btn:hover{
+    background-color: #252934;
+    border: none;
+}
+
+/* ----- Footer style starts here */
+footer{
+    background-color: #252934;
+    color: whitesmoke;
+    padding: 2em 11em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row-reverse;
+}
+
+.disp{
+    color: #e31b6d;
+    font-weight: 600;
+}
+
+.social{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.icons i{
+    padding: 0 5px;
+    color: white;
+    transition: .3s ease-out;
+}
+
+.icons i:hover{
+    color: #e31b6d;
+    cursor: pointer;
+    transform: scale(1.2);
+}
+
+@media screen and (max-width: 70em){
+    nav{
+        padding: 1.1rem 5rem;
+    }
+    
+    .logo{
+        font-size: 1.2rem;
+    }
+
+    ul{
+        gap: 30px;
+    }
+
+    ul li a{
+        font-size: .9rem;
+    }
+
+    .dev{
+        font-size: 1.2rem;
+    }
+
+    .about_me{
+        padding: 7em 2em;
+        gap: 3em;
+    }
+    
+    .about_image{
+        width: 300px;
+        height: 350px;
+    }
+    
+    .about_text{
+        font-size: .9em;
+        line-height: 1.8em;
+        width: 400px;
+        height: 350px;
+    }
+
+    .project__container{
+        grid-template-columns: auto auto;
+        gap: 2rem;
+    }
+
+    .project__card{
+        width: 320px;
+        height: 300px;
+        font-size: .8rem;
+    }
+
+
+    .project_collabo{
+        grid-template-columns: 1.5fr 2.5fr 1fr;
+        gap: 1em;
+        padding: 5em 2.5em;
+    }
+    
+    .project_collabo h2{
+        font-size: 1.2em;
+    }
+
+    footer{
+        padding: 2em 2.5em;
+        font-size: .9em;
+    }
+}
+
+@media screen and (max-width: 40em){
+    nav{
+        padding: 1rem 2rem;
+    }
+
+    .logo{
+        font-size: 1rem;
+    }
+
+    ul{
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 900px;
+        max-height: 100vh;
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        padding-left: 3rem;
+        gap: 4rem;
+        background-color: #252934;
+        transition: all .4s ease-in-out;
+    }
+
+    ul li a{
+        font-weight: 700;
+    }
+
+    ul.show{
+        left: 0;
+    }
+
+    .close{
+        position: absolute;
+        top: 8%;
+        right: 15%;
+        z-index: 2;
+        border: 2px solid #fff;
+    }
+
+    .open,
+    .close{
+        display: initial;
+        cursor: pointer;
+        color: white;
+        font-weight: 700;
+        font-family: 'Inter', sans-serif;
+        padding: .3rem .6rem;
+    }
+
+    .dev{
+        font-size: .8rem;
+    }
+
+    header button{
+        padding: 8px;
+        width: 7rem;
+        font-size: .7rem;
+    }
+
+    .about_me{
+        flex-direction: column;
+        padding: 3em .5em;
+        gap: 2em;
+    }
+
+    .about_image{
+        width: 270px;
+        height: 250px;
+    }
+    
+    .about_text{
+        font-size: .8em;
+        line-height: 1.5em;
+        width: 85%;
+        height: 320px;
+    }
+
+    .line{
+        display: none;
+    }
+
+    .project__container{
+        grid-template-columns: auto;
+        row-gap: 2rem;
+    }
+
+    .project__card{
+        width: 320px;
+        height: 320px;
+        background-color: #fff;
+        border: 1px solid #252934;
+        font-size: .6rem;
+        text-align: left;
+    }
+
+    .project__card P{
+        font-size: 12px;
+    }
+    
+    .project__card span{
+        top: 4%;
+        padding: .1rem .4rem;
+        font-size: 11px;
+    }
+
+    .project_collabo{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1em;
+        padding: 2em;
+    }
+    
+    .project_collabo h2{
+        font-size: 1.1em;
+        text-align: center;
+    }
+
+    .btn{
+        padding: .5rem 1.2rem;
+    }
+
+    footer{
+        flex-direction: column-reverse;
+        align-items: center;
+        gap: 2em;
+        padding: 2em 2.5em 1em;
+        font-size: .8em;
+        text-align: left;
+    }
+
+    footer .social{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 70px;
+    }
+} 
